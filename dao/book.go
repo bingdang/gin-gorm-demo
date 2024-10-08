@@ -30,7 +30,9 @@ func NewBookDAO(dbm *gorm.DB) BookDAOInterface {
 // 查询书籍列表
 func (BookDAO *BookDAO) List() (books []*model.Book, err error) {
 	//同时加载与用户相关联的 Users 数据。
-	tx := BookDAO.db.Preload("Users").Find(&books)
+	tx := BookDAO.db.Preload("Users", func(db *gorm.DB) *gorm.DB {
+		return db.Select("id, username")
+	}).Find(&books)
 	if tx.Error != nil {
 		log.Printf("查询书籍列表失败%s", tx.Error.Error())
 		return nil, errors.New("查询书籍列表失败" + tx.Error.Error())
