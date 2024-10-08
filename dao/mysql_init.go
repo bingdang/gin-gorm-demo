@@ -1,10 +1,11 @@
 package dao
 
 import (
-	"bookManager/model"
+	"gin-gorm-demo/model"
+	"log"
+
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
-	"log"
 )
 
 var DB *gorm.DB

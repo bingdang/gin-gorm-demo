@@ -1,8 +1,9 @@
 package router
 
 import (
-	"bookManager/controller"
-	"bookManager/middleware"
+	"gin-gorm-demo/controller"
+	"gin-gorm-demo/middleware"
+
 	"github.com/gin-gonic/gin"
 )
 

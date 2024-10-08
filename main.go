@@ -1,8 +1,9 @@
 package main
 
 import (
-	"bookManager/dao"
-	"bookManager/router"
+	"gin-gorm-demo/dao"
+	"gin-gorm-demo/router"
+
 	"github.com/gin-gonic/gin"
 )
 

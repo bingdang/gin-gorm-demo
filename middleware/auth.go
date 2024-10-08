@@ -1,10 +1,11 @@
 package middleware
 
 import (
-	"bookManager/dao"
-	"bookManager/model"
-	"github.com/gin-gonic/gin"
+	"gin-gorm-demo/dao"
+	"gin-gorm-demo/model"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
 func AuthMiddleWare() gin.HandlerFunc {

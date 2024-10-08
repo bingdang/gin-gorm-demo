@@ -1,4 +1,4 @@
-module bookManager
+module gin-gorm-demo
 
 go 1.20
 

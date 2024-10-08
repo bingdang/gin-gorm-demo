@@ -1,11 +1,12 @@
 package controller
 
 import (
-	"bookManager/dao"
-	"bookManager/model"
 	"fmt"
-	"github.com/gin-gonic/gin"
+	"gin-gorm-demo/dao"
+	"gin-gorm-demo/model"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
 // 新增书籍

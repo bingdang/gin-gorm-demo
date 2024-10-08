@@ -1,8 +1,9 @@
 package dao
 
 import (
-	"bookManager/model"
 	"errors"
+	"gin-gorm-demo/model"
+
 	"github.com/google/uuid"
 	"gorm.io/gorm"
 )

@@ -1,10 +1,11 @@
 package dao
 
 import (
-	"bookManager/model"
 	"errors"
-	"gorm.io/gorm"
+	"gin-gorm-demo/model"
 	"log"
+
+	"gorm.io/gorm"
 )
 
 type BookDAOInterface interface {
