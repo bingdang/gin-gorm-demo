@@ -83,7 +83,9 @@ func (BookDAO *BookDAO) Get(req *model.Book) (*model.Book, bool, error) {
 	resp := &model.Book{
 		ID: req.ID,
 	}
-	tx := BookDAO.db.Where("id = ?", req.ID).First(resp)
+	tx := BookDAO.db.Preload("Users", func(db *gorm.DB) *gorm.DB {
+		return db.Select("id, username")
+	}).Where("id = ?", req.ID).First(resp)
 	//如果报错是为空，那么返回false
 	if errors.Is(tx.Error, gorm.ErrRecordNotFound) {
 		return nil, false, errors.New("书籍不存在")
